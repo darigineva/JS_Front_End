@@ -1,0 +1,16 @@
+function sameNumbers(number){
+    let sum = 0;
+    let sameNumChecker = true;
+    for (let i = 0; i < number.toString().length; i++) {
+        if(i < number.toString().length - 1 && number.toString().charAt(i) !== number.toString().charAt(i + 1)){
+            sameNumChecker = false;
+        }
+        sum += Number(number.toString().charAt(i));
+    }
+    console.log(sameNumChecker);
+    console.log(sum);
+}
+sameNumbers(44144);
+sameNumbers(42145);
+sameNumbers(1111);
+sameNumbers(0);
