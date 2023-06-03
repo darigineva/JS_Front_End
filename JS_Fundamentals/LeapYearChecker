@@ -1,0 +1,12 @@
+function leapYearChecker(year) {
+    if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        console.log("yes");
+    } else {
+        console.log("no");
+    }
+}
+
+leapYearChecker(1700);
+leapYearChecker(2000);
+leapYearChecker(1600);
+leapYearChecker(2024);
