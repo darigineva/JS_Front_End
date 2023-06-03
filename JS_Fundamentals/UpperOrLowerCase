@@ -1,0 +1,22 @@
+function upperOrLowerCase(char) {
+    // let result = char === char.toUpperCase()
+    //     ? console.log('upper-case'):
+    //       console.log('lower-case');
+
+
+    // let resultString = '';            Втори начин
+    // let result = char === char.toUpperCase()
+    //     ? resultString = 'upper-case':
+    //     resultString = 'lower-case';
+    // console.log(resultString);
+
+
+    let asciiValue = char.charCodeAt();
+    if (asciiValue >= 65 && asciiValue <= 90) {
+        console.log('upper-case');
+    } else {
+        console.log('lower-case');
+    }
+}
+
+upperOrLowerCase('L');
