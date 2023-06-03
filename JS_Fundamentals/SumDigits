@@ -1,0 +1,13 @@
+function sumDigits(number) {
+
+    let numAsString = number.toString();
+    // let number = Array.from(numAsString.toString().map(Number));
+    let sum = 0;
+    for (const stringDigit of numAsString) {
+        let digit = Number(stringDigit);
+        sum += digit;
+    }
+    console.log(sum);
+}
+
+sumDigits(245678);
