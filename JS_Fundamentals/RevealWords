@@ -1,0 +1,19 @@
+function revealWords(words, text) {
+    let wordsList = words.split(', ');
+    let separateWords = text.split(' ');
+    // for (const word of separateWords) {
+    for (let i = 0; i < separateWords.length; i++) {
+        if (separateWords[i].startsWith('*')) {
+            for (let j = 0; j < wordsList.length; j++) {
+                if (wordsList[j].length == separateWords[i].length) {
+                    separateWords[i] = wordsList[j];
+                }
+            }
+        }
+    }
+
+    console.log(separateWords.join(' '));
+}
+revealWords('great',
+    'softuni is ***** place for learning new programming languages'
+);
