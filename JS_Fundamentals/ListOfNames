@@ -1,0 +1,15 @@
+function listOfNames(names) {
+    let number = 1;
+    names.sort((n1, n2) => n1.localeCompare(n2));
+    for (const name of names) {
+        // console.log(number++ + "." + name);
+        console.log(`${number++}.${name}`);
+    }
+
+    // return [...names]            Втори начин
+    //     .sort((aName, bName) => aName.localeCompare(bName))
+    //     .map((name, index) => `${index + 1}.${name}`)
+    //     .join('\n');
+}
+
+listOfNames(['a', 'b', 'a']);
