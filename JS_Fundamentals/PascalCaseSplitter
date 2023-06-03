@@ -1,0 +1,17 @@
+function pascalCaseSplitter(text) {
+    let characters = text.split('');
+    let output = [];
+    let nextWord = '';
+    for (const element of characters) {
+        if (/[A-Z]/.test(element) && nextWord !== '') {
+            output.push(nextWord);
+            nextWord = '';
+        }
+        nextWord += element;
+    }
+    if(nextWord !== '')
+        output.push(nextWord);
+    console.log(output.join(', '));
+}
+
+pascalCaseSplitter('SplitMeIfYouCanHaHaYouCantOrYouCan');
