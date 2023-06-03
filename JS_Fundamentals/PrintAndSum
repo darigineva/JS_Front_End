@@ -1,0 +1,11 @@
+function printAndSum(start, end) {
+    let sum = 0;
+    let outputArr = [];
+    for (let i = start; i <= end; i++) {
+        outputArr.push(i);
+        sum += i;
+    }
+    console.log(`${outputArr.join(" ")}`);
+    // console.log(`${output.trim()}`); Ако конкатенираме числата в стринг.
+    console.log(`Sum: ${sum}`);
+}
