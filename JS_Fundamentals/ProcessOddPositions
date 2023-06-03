@@ -1,0 +1,17 @@
+function solve(nums) {
+    console.log(nums
+        .filter((x, i) => i % 2)
+        .map(x => x * 2)
+        .reverse()
+        .join(' '));
+}
+
+solve([10, 15, 22, 25]);
+
+// Втори вариант
+// const solve = (nums) => nums
+//     .filter((x, i) => i % 2)
+//     .map(x => x * 2)
+//     .reverse()
+//     .join(' ');
+// console.log(solve([10, 15, 22, 25]));
