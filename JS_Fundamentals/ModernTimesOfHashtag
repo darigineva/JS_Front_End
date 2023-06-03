@@ -1,0 +1,51 @@
+function modernTimes(text) {
+    //////////////Втори начин
+    let a;
+    let x;
+    let c;
+    // return text.split(' ')
+    //     .filter((word) => word.startsWith('#') && containsOnlyLetters(word))
+    //     .map((word) => word.slice(1))
+    //     .filter((word) => word !== '')
+    //     .join('\n');
+
+    function containsOnlyLetters(word) {
+        return [...word.toLowerCase()]
+            .slice(1)
+            .map((symbol) => symbol.charCodeAt(0))
+            .every((charCode) => charCode >= 97 && charCode < -122);
+    }
+    console.log(containsOnlyLetters('assd'));
+}
+// function modernTimes(text) {
+//     let words = text.split(' ');
+//     let result = [];
+//     for (const word of words) {
+//         if (word.startsWith('#') && word.length > 1 && checkIfIssValid(word)) {
+//         if (word.startsWith('#') && word.length > 1 && /\#[A-Za-z]+$/.test(word)) {
+            // result.push(word.slice(1));
+        // }
+    // }
+    //
+    // console.log(result.join('\n'));
+    //
+    // function checkIfIssValid(validWord) {
+    //     let wordLowerCase = validWord.toLowerCase().slice(1);
+    //     let isValid = true;
+    //
+    //     for (const element of wordLowerCase) {
+    //         let asciiCode = element.charAt(0);
+    //         if (!(asciiCode >= 97 && asciiCode <= 122)) {
+    //             if (asciiCode < 97 || asciiCode > 122) {
+    //                 isValid = false;
+    //                 break;
+    //             }
+    //         }
+    //         return isValid;
+    //     }
+    // }
+// }
+
+
+console.log(modernTimes('Nowadays everyone uses # to tag a #special word in #socialMedia'));
+console.log();
