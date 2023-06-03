@@ -1,0 +1,16 @@
+function sortingNumbers(numbers) {
+    numbers.sort((n1, n2) => n1 - n2);
+    // numbers.sort((n1, n2) => {let result = n1 - n2});  втори начин
+    // Ако искаме да запазим оригиналния масив, а сортировката да е само в новия масив:
+    // let sorted = [...numbers].sort((n1, n2) => n1 - n2);
+    let newArr = [];
+    while (numbers.length > 0) {
+        newArr.push(numbers.shift());
+        if (numbers.length > 0) {
+            newArr.push(numbers.pop());
+        }
+    }
+    return newArr;
+}
+
+sortingNumbers([1, 65, 3, 52, 48, 63, 31, -3, 18, 56]);
